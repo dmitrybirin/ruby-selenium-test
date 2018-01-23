@@ -38,13 +38,11 @@ class ItemDetails < BasePage
     end
 
     def add_to_cart
-        el = @driver_wrapper.get_one_element_by_link_text ADD_TO_CART_LINK_NAME
-        el.click
+        @driver_wrapper.get_one_element_by_link_text(ADD_TO_CART_LINK_NAME).click
     end
 
     def go_to_cart
-        el = @driver_wrapper.get_one_element_by_link_text GO_TO_CART_LINK_NAME
-        el.click
+        @driver_wrapper.get_one_element_by_link_text(GO_TO_CART_LINK_NAME).click
         CartPage.new @driver_wrapper
     end
 
