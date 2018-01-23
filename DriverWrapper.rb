@@ -2,9 +2,10 @@ require 'selenium-webdriver'
 
 class DriverWrapper
 
-    def initialize(name)
-        @wait = Selenium::WebDriver::Wait.new(:timeout => 45, :interval => 1)
+    def initialize(name, wait)
+        @wait = wait
         @driver = Selenium::WebDriver.for :firefox if name.downcase == "firefox"
+        @driver = Selenium::WebDriver.for :chrome if name.downcase == "chrome"
     end
 
     def go_to(url)
@@ -58,6 +59,10 @@ class DriverWrapper
                 return element
             end
         end
+    end
+
+    def quit
+        @driver.quit        
     end
 
 end
