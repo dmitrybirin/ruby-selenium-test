@@ -4,7 +4,7 @@ Feature: Simple task for the job interview
   As a site user
   I should be able to search for the item, check it's features and add it to cart
 Background:
-    Given a browser is "Firefox"
+    Given a browser is "Chrome"
 
 Scenario: Search and add to cart
     When I navigate to "https://www.onliner.by/"

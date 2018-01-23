@@ -13,11 +13,19 @@ In order to accomplish that you have to use Ruby language and write Cucumber sce
 The repository is the solution in Ruby with cucumber scenario.
 
 ### Requirements
-geckodriver for Firefox and chromedriver for Chrome should be installed in PATH
+Сhromedriver for Chrome, geckodriver for Firefox e t.c. should be installed in PATH 
+
+If you have no chromedriver installed, use the chromedriver_install.sh script
+
+Be aware, that by default it will download the latest version of chromedriver and move it to `/usr/local/bin` directory (version only for mac)
+
+```
+sh chromedriver_install.sh
+```
 
 ### Installing
-Assuming you have bundler:
 
+Install required packages through [bundler](http://bundler.io/)
 ```
 bundle install
 ```
@@ -30,8 +38,9 @@ cucumber
 
 ## Assumptions
 1. There is no `Canon EOS 1300D` camera in search results, so I've chosen `Canon EOS 1300D Body`
-2. `both quantity-based and physical-based` should have `18 Мп` and `APS-C (1.6 crop)` accordingly, not vice versa. I assume it's a typo.
+2. `both quantity-based and physical-based` should have `18 Мп` and `APS-C (1.6 crop)` values accordingly, not vice versa. I assume it's a typo or I'm John Snow in photography :)
 
 
 ## Todo
-- [ ] Docker container run
+- [ ] Docker container to minimize installation hassle
+- [ ] Exception handling imrovements
