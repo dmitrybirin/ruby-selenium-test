@@ -1,21 +1,5 @@
-# require "rspec-expectations"
 require_relative File.dirname(__FILE__) + "./../../DriverWrapper"
 require_relative File.dirname(__FILE__) + "./../../pages/HomePage"
-
-
-# 
-# search_results_page = home_page
-# item_details_page = search_results_page.open "Canon EOS 1300D Body"
-# features = item_details_page.get_features
-# #asserts waits for cucumber
-# puts features["Размер экрана"]
-# puts features["Количество точек матрицы"]
-# puts features["Физический размер матрицы"]
-# item_details_page.add_to_cart
-# cart_page = item_details_page.go_to_cart
-# items = cart_page.get_items
-# #asserts waits for cucumber
-# puts items
 
 Before do |scenario|
     puts 'Executing scenario: ' + scenario.name
